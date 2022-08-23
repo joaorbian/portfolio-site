@@ -16,7 +16,7 @@ h1 {
 h2 {
   font-size: 1.875rem;
   font-weight: normal;
-  color: #35ffb4;
+  color: #FF7A00;
   font-family: 'roboto-normal'; }
 
 h3 {
@@ -57,7 +57,7 @@ main {
   margin: 5em 0; }
 
 aside {
-  width: 600px;
+  width: 500px;
   background: #111111;
   margin-right: 27px;
   border-radius: 5px; }
@@ -72,17 +72,6 @@ aside {
       margin: auto;
       position: relative;
       border-radius: 5px; }
-    aside .perfil .my-work {
-      height: 8em;
-      display: flex;
-      align-items: end;
-      background: #fff;
-      padding-bottom: 4.2em;
-      justify-content: center; }
-      aside .perfil .my-work .digital {
-        width: 35px; }
-      aside .perfil .my-work .name-work {
-        width: 130px; }
   aside .socials {
     gap: 33px;
     display: flex;
@@ -95,7 +84,8 @@ aside {
       justify-content: center;
       align-items: center;
       border-radius: 5px;
-      transition: 0.5s; }
+      transition: 0.5s;
+      margin-top: 2.5em; }
       aside .socials a:hover {
         background: #272727; }
     aside .socials img {
@@ -111,7 +101,7 @@ aside {
       display: flex;
       align-items: center;
       padding: 1em 0;
-      border-bottom: 1px solid #35ffb4; }
+      border-bottom: 1px solid #FF7A00; }
       aside .contact .contact-track .contact-box .contact-image {
         width: 70px;
         height: 70px;
@@ -136,10 +126,10 @@ section {
       width: 170px;
       height: 5px;
       margin-top: 6px;
-      background: #35ffb4; }
+      background: #FF7A00; }
 
 #large-card {
-  width: 1000px;
+  width: 900px;
   max-width: 100%;
   background: #111111;
   border-radius: 5px; }
@@ -154,9 +144,9 @@ section {
         width: 170px;
         height: 5px;
         margin-top: 6px;
-        background: #35ffb4;
+        background: #FF7A00;
         width: 90px;
-        background: #35ffb4;
+        background: #FF7A00;
         margin: 16px auto 0 auto; }
   #large-card .profile {
     margin-top: 0; }
@@ -174,7 +164,7 @@ section {
         width: 9px;
         height: 9px;
         border-radius: 100%;
-        background: #35ffb4;
+        background: #FF7A00;
         top: 14px;
         right: 20px;
         position: relative; }
@@ -192,8 +182,11 @@ section {
       transition: 0.5s; }
       #large-card .projects .project-track .project-box:hover {
         background-color: #272727; }
+        #large-card .projects .project-track .project-box:hover div a {
+          border: 1px solid #FF7A00;
+          color: #FF7A00; }
       #large-card .projects .project-track .project-box img {
-        width: 22em;
+        width: 19em;
         max-width: 100%; }
       #large-card .projects .project-track .project-box div {
         margin-top: 1em;
@@ -217,29 +210,11 @@ section {
           justify-content: center;
           border: 1px solid #fff;
           font-family: 'roboto-normal'; }
-          #large-card .projects .project-track .project-box div a:hover {
-            border: 1px solid #35ffb4;
-            color: #35ffb4; }
 
 .title-mobile {
   display: none; }
 
-@media (max-width: 1700px) {
-  aside {
-    width: 500px; }
-
-  #large-card {
-    width: 900px; }
-    #large-card .projects .project-track .project-box img {
-      width: 19em;
-      max-width: 100%; } }
 @media (max-width: 1500px) {
-  aside {
-    width: 500px; }
-
-  #large-card {
-    width: calc(900px - 10%); } }
-@media (max-width: 1300px) {
   aside {
     width: 450px; }
 
@@ -271,31 +246,16 @@ section {
           width: 19em;
           margin: auto;
           position: relative;
-          object-fit: cover;
-          border-radius: 100%;
-          height: 20em; }
-        #large-card .title-mobile .perfil-mobile .my-work {
-          width: 30em;
-          height: 5em;
-          display: flex;
-          align-items: end;
-          background: #fff;
-          border-radius: 5px;
-          /* padding-bottom: 4.2em; */
-          justify-content: center; }
-          #large-card .title-mobile .perfil-mobile .my-work .digital {
-            width: 35px; }
-          #large-card .title-mobile .perfil-mobile .my-work .name-work {
-            width: 130px; }
+          object-fit: cover; }
       #large-card .title-mobile .datas-mobile h1 {
         margin-top: 0.3em; }
-      #large-card .title-mobile .datas-mobile h1, #large-card .title-mobile .datas-mobile h2 {
-        text-align: center; } }
-@media (max-width: 1036px) {
-  #large-card .projects .project-track {
-    justify-content: center; }
-    #large-card .projects .project-track .project-box img {
-      width: 32em; } }
+      #large-card .title-mobile .datas-mobile h1,
+      #large-card .title-mobile .datas-mobile h2 {
+        text-align: center; }
+    #large-card #large-card .projects .project-track {
+      justify-content: center; }
+      #large-card #large-card .projects .project-track .project-box img {
+        width: 32em; } }
 @media (max-width: 600px) {
   main, #large-card {
     margin: 0; }
