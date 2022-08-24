@@ -7,6 +7,16 @@
 @font-face {
   font-family: 'roboto-light';
   src: url(../assets/fonts/Roboto-Light.ttf); }
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #060728; }
+
 h1 {
   font-size: 3.43rem;
   font-weight: bold;
@@ -41,15 +51,18 @@ p {
   margin-top: 16px;
   font-family: 'roboto-light'; }
 
-* {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  margin: 0;
-  padding: 0; }
-
-body {
-  background: #060728; }
+section {
+  margin: 90px 75px; }
+  section h3 {
+    display: inline-block;
+    text-align: center; }
+    section h3::after {
+      content: '';
+      display: block;
+      width: 170px;
+      height: 5px;
+      margin-top: 6px;
+      background: #FF7A00; }
 
 main {
   display: flex;
@@ -59,7 +72,6 @@ main {
 aside {
   width: 500px;
   background: #111111;
-  margin-right: 27px;
   border-radius: 5px; }
   aside .perfil {
     display: flex;
@@ -102,7 +114,7 @@ aside {
       align-items: center;
       padding: 1em 0;
       border-bottom: 1px solid #FF7A00; }
-      aside .contact .contact-track .contact-box .contact-image {
+      aside .contact .contact-track .contact-box .box-contact-image {
         width: 70px;
         height: 70px;
         background: #111111;
@@ -112,21 +124,10 @@ aside {
         border-radius: 5px;
         transition: 0.5s;
         margin-right: 1em; }
-        aside .contact .contact-track .contact-box .contact-image img {
+        aside .contact .contact-track .contact-box .box-contact-image img {
           width: 40px; }
-
-section {
-  margin: 90px 75px; }
-  section h3 {
-    display: inline-block;
-    text-align: center; }
-    section h3::after {
-      content: '';
-      display: block;
-      width: 170px;
-      height: 5px;
-      margin-top: 6px;
-      background: #FF7A00; }
+      aside .contact .contact-track .contact-box .contact-image-location {
+        filter: invert(1); }
 
 #large-card {
   width: 900px;
@@ -177,7 +178,7 @@ section {
     #large-card .projects .project-track .project-box {
       margin: 1em 1em 0 0;
       padding: 1em;
-      border-radius: 9px;
+      border-radius: 5px;
       background-color: #1a1a1a;
       transition: 0.5s; }
       #large-card .projects .project-track .project-box:hover {
@@ -204,7 +205,7 @@ section {
           display: flex;
           font-size: 18px;
           transition: 0.5s;
-          border-radius: 9px;
+          border-radius: 5px;
           align-items: center;
           text-decoration: none;
           justify-content: center;
@@ -219,7 +220,7 @@ section {
     width: 450px; }
 
   #large-card {
-    width: calc(900px - 15%); } }
+    width: calc(900px - 5%); } }
 @media (max-width: 1240px) {
   .titles {
     display: none; }
@@ -276,7 +277,7 @@ section {
     display: flex;
     font-size: 15px;
     transition: 0.5s;
-    border-radius: 9px;
+    border-radius: 5px;
     align-items: center;
     text-decoration: none;
     justify-content: center;
