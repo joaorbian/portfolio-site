@@ -3,17 +3,19 @@
 	display: block;
 	width: 170px;
 	height: 5px;
-	margin-top: 6px;
-	background: $tertiary-color;
+	margin-top: 3px;
+	background: var(--tertiary);
 }
+
 @mixin elipse {
 	content: '';
 	display: block;
 	width: 9px;
 	height: 9px;
 	border-radius: 100%;
-	background: $tertiary-color;
+	background: var(--tertiary);
 }
+
 @mixin border-box {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;

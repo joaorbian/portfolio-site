@@ -4,29 +4,28 @@
 @import 'default';
 
 main {
-	display: flex;
-	justify-content: center;
-	margin: 5em 0;
+	max-width: 1200px;
+	margin: 5em auto;
+	border-radius: var(--radius);	
+	display: grid;
+	grid-template-columns: 40% 60%;
+}
+
+.version-mobile {
+	display: none;
 }
 
 aside {
-	width: 500px;
-	background: $secondary-bg;
-	// margin-right: 25px;
-	border-radius: $radius;
-
 	.perfil {
 		display: flex;
-		margin: 50px auto;
-		flex-direction: column;
+		margin: 50px 0;
 		justify-content: center;
+		margin-top: 8em;
 
 		img {
-			top: 60px;
 			width: 19em;
 			margin: auto;
-			position: relative;
-			border-radius: $radius;
+			border-radius: var(--radius);	
 		}
 	}
 
@@ -34,43 +33,38 @@ aside {
 		gap: 33px;
 		display: flex;
 		justify-content: center;
-
+		
 		a {
 			width: 70px;
 			height: 70px;
-			background: #1f1f1f;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			border-radius: $radius;
-			transition: 0.5s;
-			margin-top: 2.5em;
+			box-shadow: var(--shadow);
+			border-radius: var(--radius);	
+			border: none;
 
 			&:hover {
-				background: #272727;
+				border: 1px solid var(--tertiary);
 			}
-		}
-
-		img {
-			width: 40px;
+		
+			img {
+				width: 40px;
+			}
 		}
 	}
 
 	.contact {
-		width: 420px;
+		width: 400px;
 		height: 400px;
-		border-radius: $radius;
-		padding: 3em;
-		margin: 3em auto;
-		background: #1f1f1f;
+		margin: 3em 2em;
 
 		.contact-track {
-
 			.contact-box {
 				display: flex;
 				align-items: center;
 				padding: 1em 0;
-				border-bottom: 1px solid $tertiary-color;
+				border-bottom: 1px solid var(--tertiary);
 
 				.box-contact-image {
 					width: 70px;
@@ -79,9 +73,7 @@ aside {
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					border-radius: $radius;
 					transition: 0.5s;
-					margin-right: 1em;
 
 					img {
 						width: 40px;
@@ -97,23 +89,17 @@ aside {
 }
 
 #large-card {
-	width: 900px;
-	max-width: 100%;
-	background: $secondary-bg;
-	border-radius: $radius;
-
-	.titles {
-		margin: 104px 160px;
+	.my-informations {
+		margin: 104px 0;
 		text-align: center;
 
-		h2 {
+		h3 {
 			margin-top: 19px;
 
 			&::after {
 				@include separator;
 				width: 90px;
-				background: $tertiary-color;
-				margin: 16px auto 0 auto;
+				margin: 10px auto 0 auto;
 			}
 		}
 	}
@@ -124,15 +110,12 @@ aside {
 
 	.experience {
 		.sub-section {
-			display: flex;
-			flex-wrap: wrap;
-			margin-top: 16px;
+			display: grid;
+			grid-template-columns: 50% 55%;
+			align-items: baseline;
 			margin-bottom: 35px;
-			justify-content: space-between;
 
 			.info-data {
-				width: 25em;
-
 				&::before {
 					@include elipse;
 					top: 14px;
@@ -144,41 +127,33 @@ aside {
 	}
 
 	.skills {
-		div {
-			img {
-				width: 40px;
-				margin: 1rem 0.3rem;
-			}
+		img {
+			width: 40px;
+			margin: 1rem 0.3rem;
 		}
 	}
 
 	.projects {
-
 		.project-track {
-			display: flex;
-			flex-wrap: wrap;
+			display: grid;
+    		grid-template-columns: 50% 50%;
 
 			.project-box {
 				margin: 1em 1em 0 0;
 				padding: 1em;
-				border-radius: $radius;
-				background-color: #1a1a1a;
-				transition: 0.5s;
+				box-shadow: var(--shadow);
+				transition: var(--transition);
 
 				&:hover {
 					background-color: #272727;
-
-					div {
-						a {
-							border: 1px solid $tertiary-color;
-							color: $tertiary-color;
-						}
-					}
 				}
 
 				img {
 					width: 19em;
 					max-width: 100%;
+					height: 9em;
+					object-fit: cover;
+					object-position: top;
 				}
 
 				div {
@@ -194,17 +169,14 @@ aside {
 					}
 
 					a {
-						color: $primary-color;
 						padding: 9px;
 						width: 130px;
 						display: flex;
 						font-size: 18px;
 						transition: 0.5s;
-						border-radius: $radius;
 						align-items: center;
 						text-decoration: none;
 						justify-content: center;
-						border: 1px solid $primary-color;
 						font-family: 'roboto-normal';
 					}
 				}
@@ -213,113 +185,125 @@ aside {
 	}
 }
 
-.title-mobile {
-	display: none;
-}
-
-@media (max-width: 1500px) {
-	aside {
-		width: 450px;
-	}
-
-	#large-card {
-		width: calc(900px - 5%);
-	}
-}
-
-@media (max-width: 1240px) {
-	.titles {
-		display: none;
-	}
-
-	aside {
-		display: none;
-	}
-
-	#large-card {
-		.title-mobile {
-			.perfil-mobile {
-				.my-work {
-					display: none;
-				}
-			}
-		}
-	}
-
-	#large-card {
-		width: 1000px;
-		margin: 0 3em;
-
-		.title-mobile {
-			display: flex !important;
-			flex-direction: column;
-			align-items: center;
-
-			.perfil-mobile {
-				margin-bottom: 2em;
-				display: flex;
-				flex-direction: column;
-
-				.myphoto {
-					top: 30px;
-					width: 19em;
-					margin: auto;
-					position: relative;
-					object-fit: cover;
-				}
-			}
-
-			.datas-mobile {
-				h1 {
-					margin-top: 0.3em;
-				}
-
-				h1,
-				h2 {
-					text-align: center;
-				}
-			}
-		}
-
-		#large-card .projects .project-track {
-			justify-content: center;
-	
-			.project-box img {
-				width: 32em;
-			}
-		}
-	}
-}
-
-@media (max-width: 600px) {
-	main, #large-card {
+@media (max-width: 960px) {
+	main {
+		display: grid;
+		grid-template-columns: 80%;
+		justify-content: center;
 		margin: 0;
 	}
 
 	section {
-		margin: 50px 55px;
+		margin: 90px 10px;
 	}
 
-	h2 {
-		font-size: 1.475rem;
+	aside {
+		display: none;
+	}
+	
+	.my-informations {
+		display: none;
 	}
 
-	#large-card .projects .project-track .project-box div h4 {
-		font-size: 15px;
-	}
-
-	#large-card .projects .project-track .project-box div a {
-		color: #fff;
-		padding: 8px;
-		width: 110px;
-		display: flex;
-		font-size: 15px;
-		transition: 0.5s;
-		border-radius: $radius;
-		align-items: center;
-		text-decoration: none;
+	.version-mobile {
+		display: grid;
+		grid-template-columns: 50% 50%;
 		justify-content: center;
-		border: 1px solid #fff;
-		font-family: "roboto-normal";
+		margin: 5em 0;
+		
+		h1 {font-size: 2.6em;}
+		h3 {font-size: 1.5em;}
+
+		.mobile-my-info-datas {
+			text-align: center;
+		}
+
+		.mobile-socials {
+			gap: 1em;
+			display: flex;
+			justify-content: center;
+			margin-top: 3em;
+			
+			a {
+				width: 70px;
+				height: 70px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				box-shadow: var(--shadow);
+				border-radius: var(--radius);	
+	
+				&:hover {
+					border: 1px solid var(--tertiary);
+				}
+			
+				img {
+					width: 40px;
+				}
+			}
+		}
+
+		.mobile-img {
+			width: 90%;
+			border-radius: var(--radius);
+			margin: auto;
+		}
+		
+		h1 {
+			margin-top: 0.3em;			
+		}
 	}
+}
+
+@media (max-width: 720px) {
+	.version-mobile {
+		grid-template-columns: 80%;
+		margin: 5em 0 4em 0;
+
+
+		.mobile-img {
+			width: 16em;
+			// height: 18em;
+			// border-radius: 100%;
+			margin: auto;
+			object-fit: cover;
+			margin-bottom: 0.5em;
+		}
+	}
+
+	#large-card {
+		.skills img {
+			width: 40px;
+			margin: 0.6rem 0.1rem;
+		}
+
+		.experience .sub-section {
+			display: grid;
+			grid-template-columns: 100%;
+			margin-bottom: 50px;
+		
+			h6 {
+				margin-bottom: 0.3em;
+			}
+		}
+	
+		.projects .project-track {
+			display: grid;
+			grid-template-columns: 100%;
+	
+			.project-box {
+				>div {
+					flex-wrap: wrap;
+	
+					h6 {
+						margin-bottom: 10px;
+					}
+				}
+	
+				img {
+				  width: 100%;
+			  }
+			}
+		}
+	} 
 }

@@ -1,7 +1,9 @@
-$primary-bg: rgb(6, 7, 40);
-$secondary-bg: #111111;
-$tertiary-bg: #1F1F1F;
-$primary-color: #fff;
-$secondary-color: #0066FF;
-$tertiary-color: #FF7A00;
-$radius: 5px;
+:root {
+   --primary: #111111;
+   --secondary: #fff;
+   --tertiary: #ff0000;
+   --forty: #111111d3;
+   --radius: 5px;
+	--shadow: 0px 0px 30px -10px rgba(0, 0, 0, 100%);
+   --transition: 0.5s;
+}

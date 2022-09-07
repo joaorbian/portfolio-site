@@ -1,49 +1,75 @@
 @import 'mixins';
 @import 'variables';
+
 * {
 	@include border-box;
 	margin: 0;
 	padding: 0;
+	border: 0;
+	font-size: 100%;
 }
+
 body {
-	background: $primary-bg;
+	color: var(--secondary);
+	background: var(--primary);
 }
+
+main {
+	box-shadow: var(--shadow);
+}
+
 h1 {
-	font-size: 3.43rem;
-	font-weight: bold;
-	color: $primary-color;
 	font-family: 'roboto-black';
+	font-size: 3rem;
 }
+
 h2 {
-	font-size: 1.875rem;
-	font-weight: normal;
-	color: $tertiary-color;
 	font-family: 'roboto-normal';
+	font-size: 1.875rem;
 }
+
 h3 {
-	font-size: 1.25rem;
-	letter-spacing: 4px;
-	text-transform: uppercase;
-	font-weight: normal;
-	color: $primary-color;
+	font-size: 1.625rem;
 	font-family: 'roboto-light';
 }
+
 h4 {
-	font-size: 17px;
-	font-weight: normal;
-	color: $primary-color;
+	font-size: 1.5rem;
 	white-space: nowrap;
 	font-family: 'roboto-normal';
+	letter-spacing: 4px;
+	margin-bottom: 5px;
+	
+	&::after {
+		@include separator;
+	}
 }
+
+h5 {
+	color: var(--tertiary);
+	font-family: 'roboto-normal';
+	font-size: 1.125rem;
+}
+
 p {
-	font-size: 15px;
-	color: $primary-color;
-	font-weight: lighter;
-	margin-top: 16px;
+	font-size: 1.125rem;
 	font-family: 'roboto-light';
 }
+
+a {
+	font-size: 1rem;
+	color: var(--secondary);
+	border: 1px solid var(--secondary);
+	border-radius: var(--radius);
+
+	&:hover {
+		color: var(--tertiary);
+		border: 1px solid var(--tertiary);
+	}
+}
+
 section {
-	margin: 90px 75px;
+	margin: 90px 50px;
 
 	h3 {
 		display: inline-block;
