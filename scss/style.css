@@ -8,7 +8,6 @@
   --primary: #111111;
   --secondary: #fff;
   --tertiary: #ff006f;
-  --forty: hsla(0, 0%, 7%, 0.827);
   --radius: 6px;
   --shadow: 0px 0px 30px -10px rgba(0, 0, 0, 100%);
   --transition: 0.5s; }
@@ -17,7 +16,6 @@
   --primary: #111111;
   --secondary: #fff;
   --tertiary: #ff006f;
-  --forty: hsla(0, 0%, 7%, 0.827);
   --radius: 6px;
   --shadow: 0px 0px 30px -10px rgba(0, 0, 0, 100%);
   --transition: 0.5s; }
@@ -28,12 +26,13 @@
   -webkit-box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%; }
+  border: 0; }
 
 body {
   color: var(--secondary);
-  background: var(--primary); }
+  background: var(--primary);
+  font-family: 'pop-regular';
+  font-size: 100%; }
 
 h1 {
   font-size: 1.6em;
