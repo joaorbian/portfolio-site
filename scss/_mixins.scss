@@ -1,18 +1,9 @@
 @mixin separator {
 	content: '';
 	display: block;
-	width: 170px;
+	width: 100%px;
 	height: 5px;
 	margin-top: 3px;
-	background: var(--tertiary);
-}
-
-@mixin elipse {
-	content: '';
-	display: block;
-	width: 9px;
-	height: 9px;
-	border-radius: 100%;
 	background: var(--tertiary);
 }
 
