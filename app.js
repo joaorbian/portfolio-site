@@ -1,5 +1,4 @@
 // const URL = 'http://localhost:3000'
-
 const URL = './db.json'
 
 async function access() {
@@ -58,8 +57,8 @@ async function registerProject() {
 async function getData() {
    try {
       // const response = await fetch(`${URL}/projects`)
-      
       const response = await fetch(URL)
+      
       if(response.status == 200) {
          const data = await response.json()
          console.log(data)

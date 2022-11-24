@@ -1,29 +1,29 @@
 [
    {
-      "project_id":6,
-      "created_at":"2022-11-10T03:00:00.000Z",
-      "updated_at":"2022-11-10T03:00:00.000Z",
-      "title":"Portifólio",
-      "description":"Este é meu portfólio, onde apresento meus conhecimentos e projetos feito apenas por mim. Tecnologias usadas para desenvolver:\n* Html\n* Css\n* Javascript\n* NodeJs\n* Typescript\n* MySQL\n* Insomnia ",
+      "project_id":1,
+      "created_at":"2022-11-24T03:00:00.000Z",
+      "updated_at":"2022-11-24T03:00:00.000Z",
+      "title":"Manager Member",
+      "description":"Desenvolvido para suprir as necessidades de academias em geral para gerenciar seus membros, o sistema supri: cadastros e atualizações de cadastros, registros e atualizações de mensalidades, o sistema identifica mensalidades atrasadas e as registra por conta. Usei Html, Scss, Javascript",
+      "website":"https://mgmember.vercel.app/pages/login.html",
+      "git":"https://github.com/progjoao/manager_member_site"
+   },
+   {
+      "project_id":2,
+      "created_at":"2022-11-24T03:00:00.000Z",
+      "updated_at":"2022-11-24T03:00:00.000Z",
+      "title":"Portfólio",
+      "description":"A ideia é que eu possa subir meus projetos com facilidade. Para desenvolver usei Html, Scss e Typescript para enviar e consumir dados da api que desenvolvi para este projeto.",
       "website":"https://progjoao.vercel.app/",
       "git":"https://github.com/progjoao/myportfolio"
    },
    {
-      "project_id":7,
-      "created_at":"2022-11-10T03:00:00.000Z",
-      "updated_at":"2022-11-10T03:00:00.000Z",
-      "title":"Manager Member",
-      "description":"Esté é um projeto muito legal",
-      "website":"http://progjoao.com/",
-      "git":"https://github.com/progjoao/progjoao_portfolio"
-   },
-   {
-      "project_id":12,
-      "created_at":"2022-11-14T03:00:00.000Z",
-      "updated_at":"2022-11-14T03:00:00.000Z",
-      "title":"Luana Menezes",
-      "description":"Este é o site da luana",
-      "website":"www.lumenezes.com",
-      "git":"www.github.com/lumenezes"
+      "project_id":3,
+      "created_at":"2022-11-24T03:00:00.000Z",
+      "updated_at":"2022-11-24T03:00:00.000Z",
+      "title":"Gato Net",
+      "description":"O projeto tem o sistema do lado do cliente e um dashboard para a empresa. É um sistema para vendas de pacotes de internet usando Angular, Typescript e Tailwindcss",
+      "website":"https://gatonet.vercel.app/",
+      "git":"https://github.com/progjoao/gatonet-site"
    }
 ]
