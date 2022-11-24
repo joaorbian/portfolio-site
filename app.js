@@ -1,6 +1,8 @@
-const URL = 'http://localhost:3000'
+// const URL = 'http://localhost:3000'
 
-async function login() {
+const URL = './db.json'
+
+async function access() {
    const { value: password } = await Swal.fire({
       title: 'Enter your password',
       input: 'password',
@@ -55,8 +57,9 @@ async function registerProject() {
 
 async function getData() {
    try {
-      const response = await fetch(`${URL}/projects`)
-
+      // const response = await fetch(`${URL}/projects`)
+      
+      const response = await fetch(URL)
       if(response.status == 200) {
          const data = await response.json()
          console.log(data)
@@ -92,5 +95,5 @@ document.documentElement.style.setProperty('--tertiary', color)
 
 document.getElementById('model').style.display = 'none'
 document.querySelector('.send').addEventListener('click', registerProject)
-document.querySelector('.profession').addEventListener('click', login)
+document.querySelector('.profession').addEventListener('click', access)
 getData()
