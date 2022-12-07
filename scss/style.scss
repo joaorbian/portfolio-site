@@ -26,6 +26,11 @@ header {
 	padding: 0 1em;
 	background-color: var(--forty);
 	box-shadow: var(--shadow);
+   position: fixed;
+   width: 100%;
+   z-index: 100;
+   background: #111;
+   top: 0;
 
 	.content {
 		max-width: 900px;
