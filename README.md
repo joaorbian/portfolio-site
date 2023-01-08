@@ -10,4 +10,8 @@
 
 <br>
   
-![Preview](https://github.com/progjoao/chatwhatsapp/blob/master/chatwhatsapp.jpeg)
+ #### Parte um
+![Preview](https://github.com/progjoao/myportfolio/blob/master/assets/images/preview.jpeg)
+
+ #### Parte dois
+![Preview](https://github.com/progjoao/myportfolio/blob/master/assets/images/preview_2.jpeg)
